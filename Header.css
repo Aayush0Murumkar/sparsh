@@ -1,0 +1,118 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.site-header--shadow {
+  box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand-icon {
+  font-size: 26px;
+  line-height: 1;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-size: 17px;
+  font-weight: 700;
+  color: #1d1d1f;
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+}
+
+.brand-tag {
+  font-size: 10px;
+  color: #8e8e93;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* Nav */
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link {
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #515154;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.18s, background 0.18s;
+}
+
+.nav-link:hover {
+  color: #1d1d1f;
+  background: #f5f5f7;
+}
+
+.nav-cta {
+  margin-left: 8px;
+  padding: 8px 18px;
+  background: #007aff;
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: background 0.18s, transform 0.12s;
+}
+
+.nav-cta:hover {
+  background: #0056cc;
+  transform: translateY(-1px);
+}
+
+/* Hamburger – hidden on desktop */
+.hamburger { display: none; }
+
+@media (max-width: 700px) {
+  .header-nav { display: none; }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #1d1d1f;
+    border-radius: 2px;
+  }
+}

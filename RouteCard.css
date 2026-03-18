@@ -1,0 +1,146 @@
+.route-card {
+  position: relative;
+  background: #fff;
+  border: 1.5px solid #e5e5ea;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.18s, box-shadow 0.18s, border-color 0.18s;
+  overflow: hidden;
+}
+
+.route-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+}
+
+.route-card:focus-visible {
+  box-shadow: 0 0 0 3px rgba(0,122,255,0.3);
+}
+
+.route-card--best {
+  border-color: #007aff;
+}
+
+.route-card--active {
+  border-color: #007aff;
+  box-shadow: 0 0 0 3px rgba(0,122,255,0.12), 0 6px 24px rgba(0,0,0,0.08);
+  background: #f7fbff;
+}
+
+/* Best ribbon */
+.best-ribbon {
+  position: absolute;
+  top: 0; right: 0;
+  background: #007aff;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 12px 4px 16px;
+  border-bottom-left-radius: 10px;
+  letter-spacing: 0.3px;
+}
+
+/* Top row */
+.rc-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 14px;
+}
+
+.rc-name-area { flex: 1; }
+
+.rc-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 6px;
+  padding-right: 8px;
+}
+
+.rc-badges { display: flex; gap: 5px; }
+
+.badge-active {
+  display: inline-block;
+  background: #e8f0fe;
+  color: #007aff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 100px;
+  letter-spacing: 0.3px;
+}
+
+/* Score ring */
+.score-ring { flex-shrink: 0; }
+
+/* Stats */
+.rc-stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-bottom: 12px;
+  background: #f5f5f7;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.rc-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+}
+
+.rc-stat-val {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1d1d1f;
+}
+
+.rc-stat-lbl {
+  font-size: 10px;
+  color: #8e8e93;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rc-stat-divider {
+  width: 1px;
+  height: 24px;
+  background: #e5e5ea;
+}
+
+/* Progress bar */
+.rc-bar-wrap {
+  height: 4px;
+  background: #f0f0f5;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.rc-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+/* Warnings */
+.rc-warnings {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 10px;
+  border-top: 1px solid #f0f0f5;
+}
+
+.rc-warning {
+  font-size: 12px;
+  color: #515154;
+  line-height: 1.4;
+}
